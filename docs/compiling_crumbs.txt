@@ -1,0 +1,48 @@
+Crumbs Document Viewer
+
+Created by: Ricardo Garcia (rago)Contact: crumbs@ragomusic.comGithub: https://github.com/ragomusic/crumbsWebsite: http://crumbs.ragomusic.comTwitter: @CrumbsSystems
+
+***********
+****MAC
+***********
+
+***configuring wxWidgets
+The project expects to find wxWidgets in a folder
+crumbs_root/thirdparty/wxWidgets3
+
+This was accomplished by doing a symbolic link on the wxWidgets3 folder to the latest install of wxWidgets-3.1.0
+
+The xcode project will look for all wxWidgets static libraries in there.
+
+
+***************
+***WINDOWS
+***************
+
+***configuring wxWidgets
+for windows we installed the latest wxWidgets on  C:\Wxwidgets3\ and defined WXWIN3 environment variable to point to the actual path.  
+The visual studio 2012 solution expects this environment variable.
+
+
+
+
+**************
+*** Example
+**************
+
+The example uses a subset of the infamous enron email dataet. (available here: https://www.cs.cmu.edu/~./enron/)
+
+
+
+Processing:
+Original messages are stored in like
+LastName-Initial/folder/text_item.
+                       /text_item.
+
+
+For ease of use, we will collect all the texts in a single, sequentially numbered set (e.g. similar to a Bates Numbering).
+
+For this example, we collected a sample of 6000 documents from the sent_items folders of several employees.
+
+All the items are processed to have two files per item. one is in TXT format, the other in PDF (for display purposes). Both have the same name but different extension
+
